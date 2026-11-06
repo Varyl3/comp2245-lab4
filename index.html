@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a book · Campus Library</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <p class="site-name">Campus Library</p>
+  </header>
+
+  <main class="catalogue">
+    <h1>Find a book</h1>
+    <p class="lede">Search the catalogue by title or author, and see how many copies are on the shelf.</p>
+
+    <form id="search-form" role="search">
+      <div class="field">
+        <label for="q">Title or author</label>
+        <input id="q" name="q" type="search" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="">All subjects</option>
+        </select>
+      </div>
+
+      <div class="check">
+        <input id="available" name="available" type="checkbox" value="1">
+        <label for="available">Only books on the shelf</label>
+      </div>
+
+      <button type="submit" class="btn">Search</button>
+    </form>
+
+    <p id="status" role="status"></p>
+
+    <div class="table-wrap" role="region" aria-labelledby="results-caption" tabindex="0">
+      <table id="results">
+        <caption id="results-caption">Books that match your search</caption>
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Year</th>
+            <th scope="col">Subject</th>
+            <th scope="col">On the shelf</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
