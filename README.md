@@ -1,6 +1,6 @@
 # COMP2245 Lab 4
 
-This is Lab 4 for Your Name.
+This is Lab 4 for Varyl Browne.
 
 A library catalogue search. The page is `index.html`. JavaScript in `app.js`
 asks `subjects.php` and `books.php` for JSON with `fetch()`, and the PHP files
